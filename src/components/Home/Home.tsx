@@ -3,11 +3,9 @@ import { api } from "../../Config/ApiConfig";
 import { IfilmesAPI, MovieCard } from "../Cards/MovieCard";
 import style from './Home.module.css'
 
-export const pegar = (title: string) => {
-    return title
-}
 
 export const Home = () => {
+    
     const [filmes, setFilmes] = useState<IfilmesAPI[]>([])
 
     useEffect(() => {
@@ -15,9 +13,6 @@ export const Home = () => {
             setFilmes(filme.data)
         })
     }, [])
-
-    
-
 
     return(
         <div className={style.container}>
@@ -32,7 +27,7 @@ export const Home = () => {
                 aprove={movie.aprove}
                 year={movie.year}
                 key={movie.title}
-                onClick={()=> pegar(movie.title)}
+                show={true}
                 />
             })}
             </div>

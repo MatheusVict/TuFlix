@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom' 
-import { Home } from './components/Home/Home';
 import { Movie } from './components/Movie/Movie';
 import { Search } from './components/Search/Search';
 
@@ -15,9 +14,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route element={<App />}>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/filmes/:title' element={<Movie/>} />
+        <Route>
+          <Route path='/' element={<App/>}/>
+          <Route path='/movies/:title' element={<Movie/>} />
           <Route path='/search' element={<Search/>} />
         </Route>
       </Routes>

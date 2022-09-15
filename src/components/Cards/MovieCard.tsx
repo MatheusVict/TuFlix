@@ -8,12 +8,12 @@ export interface IfilmesAPI {
     aprove: number;
     year: number
     alt: string;
-    onClick?: React.MouseEventHandler<HTMLAnchorElement> | undefined
+    show?: boolean
 }
 
 
 
-export const MovieCard: React.FC<IfilmesAPI> = ({ photo, alt, aprove, description, title, year, onClick }) => {
+export const MovieCard: React.FC<IfilmesAPI> = ({ photo, alt, aprove, description, title, year, show }) => {
     return (
         <div className="movie-card">
             <img src={photo} alt={alt} />
@@ -21,7 +21,9 @@ export const MovieCard: React.FC<IfilmesAPI> = ({ photo, alt, aprove, descriptio
             <p>
                 <FaStar /> {aprove}
             </p>
-            <Link to={`/search/${title}`} onClick={onClick}>Ver mais</Link>
+            {show && (
+                <Link to={`/movies/${title}`}>Ver mais</Link>
+            )}
         </div>
     );
 };
