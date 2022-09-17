@@ -1,6 +1,7 @@
 # Projeto TuFlix
 
-**OBS: Para iniciar necessário estar rodando a [API](https://github.com/MatheusVict/Back-end-Tuflix/blob/main/README.md)**
+**OBS: Para iniciar necessário estar rodando a [API](https://github.com/MatheusVict/Back-end-Tuflix/blob/main/README.md),
+ Projeto ainda não compilado**
 
 - Mostra individualmente cada filme pelo título como paramêtro.
 - Mostra todo o Array de filmes no Home.
