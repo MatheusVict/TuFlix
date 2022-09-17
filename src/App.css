@@ -1,0 +1,5 @@
+@media only screen and (min-width: 250px) and (max-width: 380px) {
+    .App {
+        max-width: 450px;
+    }
+}

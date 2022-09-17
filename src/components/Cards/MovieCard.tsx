@@ -9,11 +9,14 @@ export interface IfilmesAPI {
     year: number
     alt: string;
     show?: boolean
+    bilheteria: number;
+    lucro: number;
+    duracao: number
 }
 
 
 
-export const MovieCard: React.FC<IfilmesAPI> = ({ photo, alt, aprove, description, title, year, show }) => {
+export const MovieCard: React.FC<IfilmesAPI> = ({ photo, alt, aprove, title, show, bilheteria, description, duracao, lucro, year }) => {
     return (
         <div className="movie-card">
             <img src={photo} alt={alt} />

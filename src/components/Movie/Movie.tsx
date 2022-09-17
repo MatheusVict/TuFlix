@@ -35,26 +35,30 @@ export const Movie = () => {
                         description={movie.description}
                         aprove={movie.aprove}
                         key={movie.title}  
-                        show={false}/>
+                        show={false}
+                        bilheteria={movie.bilheteria}
+                        duracao={movie.duracao}
+                        lucro={movie.lucro}
+                        />
                     </div>
                 )}
                         <div className={style.info}>
                             <h3>
                                 <BsWallet2/> Bilheteria:
                             </h3>
-                            <p>Tal</p>
+                            <p>$ {movie?.bilheteria} milhões</p>
                         </div>
                         <div className={style.info}>
                             <h3>
                                 <BsGraphUp /> Lucro:
                             </h3>
-                            <p>Tal</p>
+                            <p>$ {movie?.lucro} milhões</p>
                         </div>
                         <div className={style.info}>
                             <h3>
                                 <BsHourglassSplit /> Duração:
                             </h3>
-                            <p>Tal</p>
+                            <p>{movie?.duracao} min</p>
                         </div>
                         <div className={style.description}>
                             <h3>

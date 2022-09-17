@@ -59,3 +59,58 @@
     background-color: transparent;
     color: #F7D354;
 }
+
+h1 {
+    margin-left:auto ;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 250px) and (max-width: 421px) {
+    .moviesConatiner {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-left: 15px ;
+    }
+
+    .container .title{
+        text-align: center;
+    }
+
+
+    .moviesConatiner div {
+        width: 370px;
+        margin-left: 0;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 422px) and (max-width: 452px) {
+    .moviesConatiner {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-left: 50px ;
+    }
+
+    .moviesConatiner div {
+        width: 370px;
+        margin-left: 0;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 453px) and (max-width: 500px) {
+    .moviesConatiner {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-left: 65px ;
+    }
+
+    .moviesConatiner div {
+        width: 450px;
+        margin-left: 0;
+        margin-bottom: 2.5rem;
+    }
+}

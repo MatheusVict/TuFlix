@@ -40,3 +40,34 @@
     background-color: transparent;
     color: #F7D354;
 }
+
+@media only screen and (max-width: 420px) {
+    
+    .navbar {
+        max-width: 419px;
+    }
+    .navbar form {
+        gap: 0.2rem;
+    }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 380px) {
+    
+    .navbar form {
+        gap: 0.2rem;
+    }
+
+    .navbar input {
+        padding: .1rem .1rem;
+        border-radius: 4px;
+        border: none;
+        max-width: 150px;
+    }
+
+.navbar {
+    max-width: 100%;
+}
+
+
+}
+

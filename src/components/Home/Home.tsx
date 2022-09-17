@@ -28,6 +28,9 @@ export const Home = () => {
                 year={movie.year}
                 key={movie.title}
                 show={true}
+                bilheteria={movie.bilheteria}
+                duracao={movie.duracao}
+                lucro={movie.lucro}
                 />
             })}
             </div>

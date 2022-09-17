@@ -1,18 +1,19 @@
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import { BiCameraMovie, BiSearchAlt2 } from 'react-icons/bi'
 import style from './NavBar.module.css'
-import { useState } from 'react';
-
+import { FormEventHandler, useState } from 'react';
 export const NavBar = () => {
 
-    const [search, setSeach] = useState('')
-    const navigate = useNavigate();
+    const [Search, setSearch] = useState('')
 
-    function submeter(e: any) {
-        e.preventDefault();
-        if(!search) return;
-        navigate(`/filmes/${search}`);
-        setSeach('')
+    const navigate = useNavigate()
+
+    const enviar: FormEventHandler<HTMLFormElement | string> = (e) => {
+        e.preventDefault()
+        if(!Search) return 
+
+        navigate(`/search/${Search}`);
+        setSearch('')
     }
 
     return(
@@ -20,9 +21,10 @@ export const NavBar = () => {
             <h2>
                 <Link to='/'><BiCameraMovie />Tú Filmes</Link>
             </h2>
-            <form onSubmit={submeter}>
+            <form onSubmit={enviar}>
                 <input type="text" placeholder="Busque um filme" 
-                onChange={(e) => setSeach(e.target.value)}
+                onChange={(e) => setSearch(e.target.value)}
+                value={Search}
                 />
                 <button type="submit"><BiSearchAlt2></BiSearchAlt2></button>
             </form>
